@@ -1,6 +1,8 @@
 :root {
     --font-color-light: rgb(255, 255, 255);
     --main-color:rgb(162, 209, 193);
+    --nav-height: 10vh;
+    --footer-height: 50px;
 }
 
 * {
@@ -9,14 +11,20 @@
     margin: 0;
 }
 
+body{
+    min-height: 100vh;
+}
+
 nav {
     color: var(--font-color-light);
     background-color: var(--main-color);
+    height: var(--nav-height);
 }
 
 footer {
     color: var(--font-color-light);
     background-color: var(--main-color);
+    height: var(--footer-height);
 }
 
 #mydiv {
@@ -36,6 +44,11 @@ footer {
     background-color: #2196F3;
     color: #fff;
   }
+  
+  .content{
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));  
+  }
 
   .test-content{ height: 100vh; 
-            background-image: url('../img/cork-board.jpg') ;}
+            background-image: url('../img/cork-board.jpg');
+    }
