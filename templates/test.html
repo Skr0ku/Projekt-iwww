@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="test-content">
+
+    <div id="mydiv">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="mydivheader">
+            <img src="{{ url_for('static',filename='img/pushpin.svg') }}" style="height:25px" alt="">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere impedit voluptate suscipit tenetur ipsam, deleniti ipsum quos aut dignissimos beatae excepturi eius, rem sequi possimus saepe nam, asperiores molestias numquam?</p>
+        
+    </div>
+
+
+</div>
+    
+{% endblock %}
+
+{% block javascript %}
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+{% endblock %}

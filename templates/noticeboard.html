@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        {% if content %}
+            <table border = 1>
+                {% for record in content %}
+                <tr>
+                    <th>{{record.title}}</th>
+                    <td><a href="messages/{{record.id}}">details</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <h1>BRAK OGŁOSZEŃ</h1>
+        {% endif%}
+    </div>
+{% endblock %}

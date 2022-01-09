@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <table border = 1>
+            {% for record in content.data %}
+            <tr>
+                <h3>{{record.title}}</h3>
+                <p>{{record.content}}</p>
+                <p>{{record.last_update}}</p>
+                <p>{{record.publication_date}}</p>
+                <p>{{record.status}}</p>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+    <head>
+        {% if title %}
+        <title>{{ title }} - Tablica ogłoszeń</title>
+        {% else %}
+        <title>Tablica ogłoszeń</title>
+        {% endif %}
+        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body>
+        <nav>
+            <a href="/">LOGO</a>
+            <ul>
+                <li><a href="/messages/create">Dodaj ogłoszenie</a></li>
+                <li><a href="/messages">ogłoszenia</a></li>
+                <li><a href="/about">about</a></li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+        <footer>
+            projekt iwww DS 2021
+        </footer>
+    </body>
+    
+
+    {% block javascript %}
+    {% endblock %}
+        
+   
+</html>
